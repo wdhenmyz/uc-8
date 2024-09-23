@@ -25,6 +25,7 @@ export default function TabLayout (){
                 name="about"
                 options={{
                     title: 'sobre mim',
+                    headerShown:false,
                     tabBarIcon: ({color}) => <FontAwesome size={28} name="user" color={color}/>
                 }}
             />
