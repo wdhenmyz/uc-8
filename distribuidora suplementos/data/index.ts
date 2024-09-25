@@ -6,6 +6,7 @@ type Data = {
     categories: Category[],
     products1: Product[],
 };
+
 export const data: Data = {
     categories: [
         {
@@ -30,7 +31,7 @@ export const data: Data = {
         },
         {
             id: 5,
-            title: 'Alimentos Saudáveis',
+            title: 'Alimentos e Snacks Saudáveis',
             cover: 'https://puravida.fbitsstatic.net/img/p/mousse-protein-cupuacu-70446/257304-1.jpg?w=200&h=200&v=no-value'
         },
     ],
@@ -684,10 +685,280 @@ export const data: Data = {
         {   
             idCategory: 4, 
             id: 70,           
-            image: "", 
-            title: "", 
-            description: "", 
-            price: 0
+            image: "https://puravida.fbitsstatic.net/img/p/alpha-metabolicus-70308/257086-1.jpg?w=200&h=200&v=no-value", 
+            title: "ALPHA METABOLICUS", 
+            description: "EXTRATO DE CAFÉ VERDE + TIROSINA 60 CÁPS", 
+            price: 151.98
+        },
+
+        {   
+            idCategory: 4, 
+            id: 72,           
+            image: "https://puravida.fbitsstatic.net/img/p/bio-vit-b-70422/257272-1.jpg?w=200&h=200&v=no-value", 
+            title: "BIO VIT B+", 
+            description: "VITAMINAS DO COMPLEXO B 30 CÁPS", 
+            price: 41.58
+        },
+
+        {   
+            idCategory: 4, 
+            id: 73,           
+            image: "https://puravida.fbitsstatic.net/img/p/bio-vit-c-70117/256601-2.jpg?w=200&h=200&v=no-value", 
+            title: "BIO VIT C+", 
+            description: "ANTIOXIDANTE 60 CÁPS", 
+            price: 50.38
+        },
+
+        {   
+            idCategory: 4, 
+            id: 74,           
+            image: "https://puravida.fbitsstatic.net/img/p/bio-zinco-70419/257269-1.jpg?w=200&h=200&v=no-value", 
+            title: "BIO ZINCO", 
+            description: "ZINCO QUELATO + AMINOÁCIDOS", 
+            price: 31.48
+        },
+
+        {   
+            idCategory: 4, 
+            id: 75,           
+            image: "https://puravida.fbitsstatic.net/img/p/coenzima-q10-70435/257266-1.jpg?w=200&h=200&v=no-value", 
+            title: "COENZIMA Q10", 
+            description: "METABOLIC HEALTH 60 CÁPS", 
+            price: 107.98
+        },
+
+        {   
+            idCategory: 4, 
+            id: 76,           
+            image: "https://puravida.fbitsstatic.net/img/p/whey-protein-grassfed-sache-70142/256626-1.jpg?w=200&h=200&v=no-value", 
+            title: "WHEY PROTEIN GRASSFED SACHE", 
+            description: "SABOR FRAMBOESA 30 G", 
+            price: 15.67
+        },
+
+        {   
+            idCategory: 4, 
+            id: 77,           
+            image: "https://puravida.fbitsstatic.net/img/p/whey-protein-grassfed-proteina-whey-sache-70143/256627-1.jpg?w=200&h=200&v=no-value", 
+            title: "WHEY PROTEIN GRASSFED", 
+            description: "SABOR FRAMBOESA 30 G", 
+            price: 15.67
+        },
+
+        {   
+            idCategory: 4, 
+            id: 77,           
+            image: "https://puravida.fbitsstatic.net/img/p/vegan-protein-vanilla-450g-70344/257155-1.jpg?w=200&h=200&v=no-value", 
+            title: "VENAGN PROTEIN", 
+            description: "BLEND DE PROTEÍNAS VEGETAIS SABOR VANILLA 450 G", 
+            price: 145.78
+        },
+
+        {   
+            idCategory: 4, 
+            id: 78,           
+            image: "https://puravida.fbitsstatic.net/img/p/whey-protein-isolado-chocolate-450g-70345/257156-1.jpg?w=200&h=200&v=no-value", 
+            title: "WHEY PROTEIN ISOLADO", 
+            description: "WHEY 100% ISOLADO DARK CHOCOLATE 450 G", 
+            price: 145.78
+        },
+
+        {   
+            idCategory: 4, 
+            id: 79,           
+            image: "https://puravida.fbitsstatic.net/img/p/whey-protein-isolado-vanilla-450g-70346/257157-1.jpg?w=200&h=200&v=no-value", 
+            title: "WHEY PROTEIN ISOLADO", 
+            description: "WHEY 100% ISOLADO DARK VANILLA 450 G", 
+            price: 145.78
+        },
+
+        {   
+            idCategory: 4, 
+            id: 80,           
+            image: "https://puravida.fbitsstatic.net/img/p/whey-protein-isolado-vanilla-sache-70376/257208-1.jpg?w=200&h=200&v=no-value", 
+            title: "WHEY PROTEIN ISOLADO", 
+            description: "WHEY 100% ISOLADO DARK VANILLA 30 G", 
+            price: 15.68
+        },
+
+        {   
+            idCategory: 5, 
+            id: 81,           
+            image: "https://puravida.fbitsstatic.net/img/p/coconut-granola-70255/256891-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCONUT GRANOLA", 
+            description: "Sabor Vanilla, sem Açúcar, Zero Glúten, Snack Vegano 180 G", 
+            price: 31.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 82,           
+            image: "https://puravida.fbitsstatic.net/img/p/coconut-granola-70252/256883-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCONUT GRANOLA", 
+            description: "DARK CHOCOLATE 180 G", 
+            price: 31.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 83,           
+            image: "https://puravida.fbitsstatic.net/img/p/coconut-granola-jabuticaba-70382/257219-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCONUT GRANOLA", 
+            description: "Jabuticaba, sem Açúcar, Zero Glúten, Snack Vegano 180 G", 
+            price: 31.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 84,           
+            image: "https://puravida.fbitsstatic.net/img/p/coconut-granola-sache-70254/256888-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCONUT GRANOLA", 
+            description: "Sabor Vanilla, sem Açúcar, Zero Glúten, Snack Vegano 30 G", 
+            price: 7.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 85,           
+            image: "https://puravida.fbitsstatic.net/img/p/coconut-granola-chocolate-sache-70253/256885-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCONUT GRANOLA", 
+            description: "Chocolate, sem Açúcar, Zero Glúten, Snack Vegano 30 G", 
+            price: 7.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 86,           
+            image: "https://puravida.fbitsstatic.net/img/p/coconut-granola-jabuticaba-sache-70381/257217-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCONUT GRANOLA", 
+            description: "Jabuticaba, sem Açúcar, Zero Glúten, Snack Vegano 30 G", 
+            price: 7.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 87,           
+            image: "https://puravida.fbitsstatic.net/img/p/snack-plant-cheese-70300/257070-1.jpg?w=200&h=200&v=no-value", 
+            title: "SNACK PLANT CHEESE", 
+            description: "PLANT CHEESE 40 G", 
+            price: 15.48
+        },
+
+        {   
+            idCategory: 5, 
+            id: 88,           
+            image: "https://puravida.fbitsstatic.net/img/p/snack-plant-bacon-70301/257072-1.jpg?w=200&h=200&v=no-value", 
+            title: "SNACK PLANT BACON", 
+            description: "PLANT BACON 40 G", 
+            price: 15.48
+        },
+
+        {   
+            idCategory: 5, 
+            id: 89,           
+            image: "https://puravida.fbitsstatic.net/img/p/mousse-protein-cupuacu-70446/257304-1.jpg?w=200&h=200&v=no-value", 
+            title: "MOUSSE PROTEIN", 
+            description: "SABOR CUPUAÇU 120 G", 
+            price: 60.76
+        },
+
+        {   
+            idCategory: 5, 
+            id: 90,           
+            image: "https://puravida.fbitsstatic.net/img/p/mousse-protein-maracuja-70444/257302-1.jpg?w=200&h=200&v=no-value", 
+            title: "MOUSSE PROTEIN", 
+            description: "SABOR MARACUJÁ 120 G", 
+            price: 60.76
+        },
+
+        {   
+            idCategory: 5, 
+            id: 91,           
+            image: "https://puravida.fbitsstatic.net/img/p/mousse-protein-chocolate-70445/257303-1.jpg?w=200&h=200&v=no-value", 
+            title: "MOUSSE PROTEIN", 
+            description: "SABOR CHOCOLATE 120 G", 
+            price: 60.76
+        },
+
+        {   
+            idCategory: 5, 
+            id: 92,           
+            image: "https://puravida.fbitsstatic.net/img/p/coco-cream-leite-de-coco-em-po-70104/256588-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCO CREAM", 
+            description: "CREMOSO, SEM AÇÚCAR, VEGANO 250 G", 
+            price: 53.58
+        },
+
+        {   
+            idCategory: 5, 
+            id: 93,           
+            image: "https://puravida.fbitsstatic.net/img/p/coco-cream-chocolate-70428/257278-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCO CREAM CHOCOLATE", 
+            description: "LEITE DE COCO EM PÓ CHOCOLATE BELGA 250 G", 
+            price: 53.58
+        },
+
+        {   
+            idCategory: 5, 
+            id: 94,           
+            image: "https://puravida.fbitsstatic.net/img/p/coco-cream-cappuccino-70430/257286-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCO CREAM CAPPUCINO", 
+            description: "SABOR CAPPUCCINO, VEGANO, ZERO AÇÚCAR 250 G", 
+            price: 53.58
+        },
+
+        {   
+            idCategory: 5, 
+            id: 95,           
+            image: "https://puravida.fbitsstatic.net/img/p/coco-cream-leite-de-coco-em-po-sache-70295/257059-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCO CREAM", 
+            description: "CREMOSO, SEM AÇÚCAR, VEGANO 25 G", 
+            price: 7.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 96,           
+            image: "https://puravida.fbitsstatic.net/img/p/coco-cream-belgium-chocolate-sache-70297/257065-1.jpg?w=200&h=200&v=no-value", 
+            title: "COCO CREAM BELGIUM CHOCOLATE SACHÊ", 
+            description: "LEITE DE COCO EM PÓ CHOCOLATE BELGA 25 G", 
+            price: 7.98
+        },
+
+        {   
+            idCategory: 5, 
+            id: 97,           
+            image: "https://puravida.fbitsstatic.net/img/p/cacau-premium-70214/256698-1.jpg?w=200&h=200&v=no-value", 
+            title: "CACAU PREMIUM", 
+            description: "CACAU EM PÓ 250 G", 
+            price: 62.38
+        },
+
+        {   
+            idCategory: 5, 
+            id: 98,           
+            image: "https://puravida.fbitsstatic.net/img/p/cacau-butter-premium-manteiga-de-cacau-70125/256609-1.jpg?w=200&h=200&v=no-value", 
+            title: "CACAU BUTTER PREMIUM", 
+            description: "MANTEIGA CLARIFICADA EM TABLETES, VEGANO. 250 G", 
+            price: 58.38
+        },
+
+        {   
+            idCategory: 5, 
+            id: 99,           
+            image: "https://puravida.fbitsstatic.net/img/p/zero-adocante-natural-70246/256867-1.jpg?w=200&h=200&v=no-value", 
+            title: "ZERO", 
+            description: "ZERO CALORIAS, SEM RETROGOSTO, COM STEVIA REB A 100 G", 
+            price: 38.38
+        },
+
+        {   
+            idCategory: 5, 
+            id: 100,           
+            image: "https://puravida.fbitsstatic.net/img/p/brownie-low-carb-70205/256689-1.jpg?w=200&h=200&v=no-value", 
+            title: "BROWNIE LOW CARB", 
+            description: "Mistura para Brownie 400 G", 
+            price: 41.58
         },
         
     ],
