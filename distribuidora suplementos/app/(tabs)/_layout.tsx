@@ -24,7 +24,7 @@ export default function TabLayout (){
             <Tabs.Screen
                 name="about"
                 options={{
-                    title: 'sobre mim',
+                    title: 'sobre a loja',
                     headerShown:false,
                     tabBarIcon: ({color}) => <FontAwesome size={28} name="user" color={color}/>
                 }}

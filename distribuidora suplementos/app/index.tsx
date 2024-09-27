@@ -1,4 +1,4 @@
-import { Image, ImageBackground, SafeAreaView, Text, View } from "react-native";
+import { Image, ImageBackground, SafeAreaView, Text, View, TextInput } from "react-native";
 import { StyleSheet } from "react-native";
 import { Button } from "../components/button";
 import { router } from "expo-router";
@@ -23,6 +23,8 @@ export default function Screen (){
                     resizeMode="cover"
                 />
 
+                <View style={styles.view2}></View>
+
                 <View style={styles.view}>
                     <Text style={styles.h1}> Distribuidora Suplementos</Text>
 
@@ -32,8 +34,24 @@ export default function Screen (){
                     </Text>
 
                 </View>
+
+                <TextInput 
+                  style={styles.input}
+                  placeholder='digite seu usuário/email/número:'
+                />
+
+                <TextInput 
+                  style={styles.input}
+                  placeholder='digite sua senha:'
+                />
+
                 <Button
-                    title="entrar"    
+                    title="entrar na conta"    
+                    onPress={Start}
+                />
+                
+                <Button
+                    title="entrar como convidado"    
                     onPress={Start}
                 />
             </ImageBackground>
@@ -64,6 +82,26 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+
+    view2: {
+        backgroundColor: 'white',  
+        borderRadius: 20, 
+        padding: 5,
+        width: '60%',       
+        height: 180,
+        marginBottom: 10,
+        marginTop: -196,
+        opacity: 0.1
+    },
+
+    input: {
+        width: 250,
+        height: 40,
+        backgroundColor: 'grey',
+        borderRadius: 5,
+        marginBottom: 10,
+        textAlign:'center',
     },
 
     h1: {

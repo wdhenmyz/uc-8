@@ -34,9 +34,9 @@ export default function Screem(){
                     ou em outras redes sociais:               
                     </Text>   
 
-                    <Text style={{fontSize:18, color: 'black', fontWeight: 'bold'}}>whatsapp: (99) 6666-6666</Text>
+                    <Text style={{fontSize:19, color: 'black', fontWeight: '900'}}>whatsapp: (99) 6666-6666</Text>
 
-                    <Text style={{fontSize:18, color: 'black', fontWeight: 'bold'}}>facebook: Distribuidora Suplementos</Text> 
+                    <Text style={{fontSize:19, color: 'black', fontWeight: '900'}}>facebook: Distribuidora Suplementos</Text> 
              
 
                 <Image
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         padding: 1,
-        paddingTop: 30
+        paddingTop: 53,
+        backgroundColor: '#bfc0d8'
     },
 
     container2: {
@@ -63,19 +64,18 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         padding: 1,
-        paddingTop: 30,
-        width: '100%',
-        height: '100%',
+        width: '110%',
+        height: '110%',
         marginBottom: -640,
-        opacity: 0.6
+        opacity: 0.3
     },
 
     txt: {
-        fontSize: 17,
+        fontSize: 20,
         textAlign: 'center',
         margin: 10,
-        color: 'black',
-        fontWeight: 'bold'
+        color: '#000000',
+        fontWeight: '900'
     },
 
     img: {
