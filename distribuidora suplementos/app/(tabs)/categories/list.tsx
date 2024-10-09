@@ -3,6 +3,7 @@ import { View, StyleSheet, FlatList, ImageBackground } from "react-native";
 // puxando todos as categorias
 import { getAllCategories } from "../../../services/category";
 import { CategoryItem } from "../../../components/category-item";
+import React from "react";
 
 export default function Screen (){
     const categories = getAllCategories();
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     list: {
         flex: 1,
         width: '100%',
-        padding: 20,
+        padding: 10,
     },
 
     listContent: {
