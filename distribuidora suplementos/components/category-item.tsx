@@ -1,6 +1,7 @@
 import { Pressable, Text, StyleSheet, Image, View } from "react-native";
 import { Category } from "../types/category"
 import { router } from "expo-router";
+import React from "react";
 
 type Props = {
     data: Category;
@@ -30,23 +31,23 @@ export const CategoryItem = ({data}: Props) => {
 
 const styles = StyleSheet.create ({
     container: {
-        margin: 10,
+        margin: 5,
         backgroundColor: "#333333",
         borderRadius: 10,
     },
 
     image: {
         width: '100%',
-        height: 150,
+        height: 120,
         borderRadius: 10,
     },
 
     bg: {
-        height: 150,
+        height: 120,
         borderRadius: 10,
         backgroundColor: "black",
         opacity: 0.6,
-        marginTop: -150
+        marginTop: -120
     },
 
     box: {
@@ -58,7 +59,7 @@ const styles = StyleSheet.create ({
 
     title: {
         color: 'white',
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: '400'
     }
 })

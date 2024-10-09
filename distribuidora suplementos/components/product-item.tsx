@@ -3,6 +3,7 @@ import { Product } from "../types/product"
 
 // rota dinâmica
 import { Link } from "expo-router"
+import React from "react"
 
 type Props = {
     data: Product
