@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
       alignItems:'center',
       backgroundColor: 'white',
       
-      opacity: 0.2,
+      opacity: 0.4,
     },
 
     list4: {

@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 
 export default function Screem(){
@@ -34,9 +35,9 @@ export default function Screem(){
                     ou em outras redes sociais:               
                     </Text>   
 
-                    <Text style={{fontSize:19, color: 'black', fontWeight: '900'}}>whatsapp: (99) 6666-6666</Text>
+                    <Text style={{fontSize:17, color: 'black', fontWeight: '900'}}>whatsapp: (99) 6666-6666</Text>
 
-                    <Text style={{fontSize:19, color: 'black', fontWeight: '900'}}>facebook: Distribuidora Suplementos</Text> 
+                    <Text style={{fontSize:17, color: 'black', fontWeight: '900'}}>facebook: Distribuidora Suplementos</Text> 
              
 
                 <Image
@@ -55,8 +56,8 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         padding: 1,
-        paddingTop: 53,
-        backgroundColor: '#bfc0d8'
+        paddingTop: 30,
+        backgroundColor: 'lightgrey'
     },
 
     container2: {
@@ -65,23 +66,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 1,
         width: '110%',
-        height: '110%',
-        marginBottom: -640,
+        height: '140%',
+        marginBottom: -600,
         opacity: 0.3
     },
 
     txt: {
-        fontSize: 20,
+        fontSize: 15,
         textAlign: 'center',
-        margin: 10,
+        margin: 5,
         color: '#000000',
         fontWeight: '900'
     },
 
     img: {
-        width: 230,
-        height: 230,
+        width: 210,
+        height: 210,
         borderRadius: 115,
-        marginTop: 1,
+        marginTop: -10,
     },
 })
