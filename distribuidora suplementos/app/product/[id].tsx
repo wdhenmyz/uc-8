@@ -4,6 +4,7 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
 import { getProductById } from "../../services/product";
+import React from "react";
 
 export default function Screen() {
     // receber o id

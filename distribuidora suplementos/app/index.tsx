@@ -2,6 +2,7 @@ import { Image, ImageBackground, SafeAreaView, Text, View, TextInput } from "rea
 import { StyleSheet } from "react-native";
 import { Button } from "../components/button";
 import { router } from "expo-router";
+import React from "react";
 
 export default function Screen (){
     const Start = () => {

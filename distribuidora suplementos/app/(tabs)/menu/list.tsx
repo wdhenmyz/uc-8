@@ -1,3 +1,4 @@
+import React from "react";
 import { View, StyleSheet, TouchableOpacity, Image, Text } from "react-native";
 
 
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
 
     topo:{
         width:'98%',
-        height:'20%',
+        height:'24%',
         backgroundColor: '#B0C4DE',
         marginBottom: 10,
         alignItems: 'center',
@@ -92,8 +93,6 @@ const styles = StyleSheet.create({
     topoicone:{
         width: 100,
         height: 100,
-        marginRight: 10,
-        marginLeft: 10
     },
 
     topocaixa:{
@@ -114,12 +113,12 @@ const styles = StyleSheet.create({
     config: {
         zIndex: 1, // Ensure the main content stays on top
         width: '95%',
-        height: 60,
+        height: 50,
         backgroundColor: '#B0C4DE',
         borderRadius: 10,
         alignItems: 'center',
         flexDirection: 'row',
-        marginBottom: 20
+        marginBottom: 15
     },
 
     IconeConfig: {
