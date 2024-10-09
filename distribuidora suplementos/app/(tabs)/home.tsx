@@ -1,12 +1,11 @@
-import { View, StyleSheet, FlatList, ImageBackground } from "react-native";
+import { View, StyleSheet, FlatList, ImageBackground, Image } from "react-native";
 
 // puxando todos os produtos
-import { getAllProducts } from "../../services/product";
-import { ProductItem } from "../../components/product-item";
+
 
 export default function Screen (){
-    const products = getAllProducts();
-
+    const puravida2 = {uri: 'https://puravida.fbitsstatic.net/img/b/8d53d2f6-471b-46dc-8fe4-389bfe885646.jpg'}
+    const puravida = {uri: 'https://files.cached.puravida.com.br/api/files/static/4ea73f5b-3588-4a18-9e90-5ccc9e71c77e'}
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
     return(
@@ -16,12 +15,18 @@ export default function Screen (){
                 resizeMode="cover"
                 style={styles.container}
             >
-                <FlatList
-                    data={products}
-                    renderItem={({item}) => <ProductItem data={item}/>}
-                    keyExtractor={item => item.id.toString()}
-                    style={styles.list}
+              <View style={styles.list}>
+                <Image
+                  source={puravida}
+                  style={styles.tinyLogo}
                 />
+                <Image
+                  source={puravida2}
+                  style={styles.tinyLogo}
+                  resizeMode= "cover"
+                />
+              </View>
+                
             </ImageBackground>
         </View>
     );
@@ -30,12 +35,18 @@ export default function Screen (){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
+      paddingTop: 40
     },
 
     list: {
-        flex: 1,
         width: '100%',
-        padding: 20,
+        height: 200,
+        padding: 1,
+        flexDirection: 'row',
+        overflow: 'hidden'
+    },
+
+    tinyLogo: {
+      width: '100%',
     }
 })
