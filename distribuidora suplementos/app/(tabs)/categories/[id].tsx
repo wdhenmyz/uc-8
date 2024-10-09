@@ -5,6 +5,7 @@ import { ProductItem } from "../../../components/product-item";
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { getCategoryById } from "../../../services/category";
 import { getProductsByCategory } from "../../../services/product";
+import React from "react";
 
 export default function Screen (){
     // receber o id de categotyItem como string
