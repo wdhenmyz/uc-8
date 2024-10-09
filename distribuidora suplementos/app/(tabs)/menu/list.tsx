@@ -72,7 +72,7 @@ export default function Screen (){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#363636',
+        backgroundColor: 'lightgrey',
         flexDirection: 'column', 
         alignItems: 'center', 
         justifyContent: 'flex-start',

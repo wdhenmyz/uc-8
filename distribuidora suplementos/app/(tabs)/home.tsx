@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
 
     list2: {
       width: '100%',
-      height: 564,
+      height: 500,
       alignItems:'center',
       marginTop: -562,
     },
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     list4: {
         flex: 1,
         width: '100%',
-        padding: 20,
+        padding: 3,
     },
 
     txt: {
