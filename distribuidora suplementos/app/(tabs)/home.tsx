@@ -2,8 +2,6 @@ import { View, StyleSheet, ScrollView, ImageBackground, Image, TextInput, FlatLi
 import React from 'react';
 
 // puxando todos os produtos
-import { getAllProducts } from "./product"
-import { ProductItem } from "./product-item"
 
 export default function Screen (){
     const puravida2 = {uri: 'https://puravida.fbitsstatic.net/img/b/8d53d2f6-471b-46dc-8fe4-389bfe885646.jpg'}
@@ -11,8 +9,6 @@ export default function Screen (){
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
     const [text, onChangeText] = React.useState('procure produtos');
-
-    const products = getAllProducts();
 
     return(
         <View style={styles.container}>
@@ -22,7 +18,7 @@ export default function Screen (){
                 style={styles.container}
             >
               <View style={styles.list}>
-                <ScrollView style={styles.scrollView} horizontal>
+                <ScrollView horizontal>
                   <Image
                     source={puravida}
                     style={styles.tinyLogo}
@@ -44,13 +40,10 @@ export default function Screen (){
                   onChangeText={onChangeText}
                   value={text}
                 />
-                <FlatList
-                  data={products}
-                  renderItem={({item}) => <ProductItem data={item}/>}
-                  keyExtractor={item => item.id.toString()}
-                  style={styles.list}
-                />
+                
               </View>
+
+              <View style={styles.list3}></View>
                 
             </ImageBackground>
         </View>
@@ -79,7 +72,6 @@ const styles = StyleSheet.create({
     list2: {
       width: '100%',
       height: 564,
-      backgroundColor: 'red',
       alignItems:'center'
     },
 
@@ -87,10 +79,25 @@ const styles = StyleSheet.create({
       height: 60,
       width: 300,
       margin: 12,
-      borderWidth: 1,
+      borderWidth: 5,
       padding: 10,
+      fontSize: 20,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      backgroundColor: 'lightgrey',
+      borderRadius: 20
     },
 
+    list3: {
+      width: '100%',
+      height: 564,
+      alignItems:'center',
+      backgroundColor: 'white',
+      marginTop: -562,
+      opacity: 0.2
+    },
+
+    
 
     txt: {
       fontSize: 30
