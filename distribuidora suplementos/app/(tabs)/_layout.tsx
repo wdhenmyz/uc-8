@@ -4,12 +4,27 @@ import React from "react";
 
 export default function TabLayout (){
     return (
-        <Tabs>
+        <Tabs 
+            screenOptions={{
+                tabBarActiveTintColor: 'green',
+                tabBarInactiveTintColor: 'black',
+                tabBarStyle:{
+                    backgroundColor: 'lightgrey',
+                    borderTopLeftRadius: 20,
+                    borderTopRightRadius: 20
+                },
+                headerStyle:{
+                    height: 60
+                },
+            } }
+        >
+            
             <Tabs.Screen
                 name="home"
                 options={{
                     title: 'início',
                     tabBarIcon: ({color}) => <FontAwesome size={28} name="home" color={color}/>
+                    
                 }}
             />
 
@@ -18,7 +33,7 @@ export default function TabLayout (){
                 options={{
                     title: 'categorias',
                     headerShown:false,
-                    tabBarIcon: ({color}) => <FontAwesome size={28} name="archive" color={color}/>
+                    tabBarIcon: ({color}) => <FontAwesome size={28} name="archive" color={color}/>,
                 }}
             />
 
