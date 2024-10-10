@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         borderRadius: 10
     },
 
