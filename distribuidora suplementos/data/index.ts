@@ -43,7 +43,7 @@ export const data: Data = {
             id: 1,            
             image: "https://puravida.fbitsstatic.net/img/p/collagen-protein-neutro-70402/257251-1.jpg?w=200&h=200&v=no-value", 
             title: "COLLAGEN PROTEIN", 
-            description: "SABOR NEUTRO 450 G.", 
+            description: "SABOR NEUTRO 450 G", 
             price: 154.48
         },
 
@@ -61,7 +61,7 @@ export const data: Data = {
             id: 3,            
             image: "https://puravida.fbitsstatic.net/img/p/collagen-protein-berries-sache-70412/257261-1.jpg?w=200&h=200&v=no-value", 
             title: "COLLAGEN PROTEIN", 
-            description: "BERRIES SILVESTRES 40 g.", 
+            description: "BERRIES SILVESTRES 40 g", 
             price: 14.98
         },
 
