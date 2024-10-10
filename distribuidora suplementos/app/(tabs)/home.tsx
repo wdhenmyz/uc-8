@@ -1,5 +1,7 @@
 import { View, StyleSheet, ScrollView, ImageBackground, Image, TextInput, FlatList } from "react-native";
 import React from 'react';
+import { useState } from 'react';
+
 
 // puxando todos os produtos
 import { getAllProducts } from "../../services/product";
@@ -10,9 +12,9 @@ export default function Screen (){
     const puravida = {uri: 'https://files.cached.puravida.com.br/api/files/static/4ea73f5b-3588-4a18-9e90-5ccc9e71c77e'}
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
-    const [text, onChangeText] = React.useState('procure produtos');
-
     const products = getAllProducts();
+
+    const [Text, onChangeText] = useState('procure produto');
 
     return(
         <View style={styles.container}>
@@ -44,7 +46,7 @@ export default function Screen (){
                 <TextInput
                   style={styles.input}
                   onChangeText={onChangeText}
-                  value={text}
+                  value={Text}
                 />
 
                 <FlatList
@@ -90,12 +92,12 @@ const styles = StyleSheet.create({
     },
 
     input: {
-      height: 40,
-      width: 250,
+      height: 30,
+      width: 210,
       margin: 12,
       borderWidth: 2,
-      padding: 10,
-      fontSize: 20,
+      padding: 1,
+      fontSize: 15,
       fontWeight: 'bold',
       textAlign: 'center',
       backgroundColor: 'lightgrey',

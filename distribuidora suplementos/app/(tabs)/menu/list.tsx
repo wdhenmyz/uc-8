@@ -1,8 +1,12 @@
+import { router } from "expo-router";
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Image, Text } from "react-native";
 
 
 export default function Screen (){
+    const Start = () => {
+        router.replace('/')
+    }
 
     return(
         <View style={styles.container}>
@@ -56,7 +60,7 @@ export default function Screen (){
                 <Text style={styles.txtconfig}> suporte ao cliente </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.config}>
+            <TouchableOpacity style={styles.config} onPress={Start}>
                 <Image
                     source={{uri: 'https://cdn-icons-png.flaticon.com/128/2734/2734817.png'}}
                     resizeMode="cover"
