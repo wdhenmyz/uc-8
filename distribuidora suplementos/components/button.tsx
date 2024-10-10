@@ -1,3 +1,4 @@
+import React from "react";
 import { Pressable, Text, StyleSheet } from "react-native";
 
 type Props = {
@@ -19,7 +20,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         paddingVertical: 15,
         paddingHorizontal: 25,
-        width: '50%'
+        width: '50%',
+        marginBottom: 3
     },
 
     buttonText: {
