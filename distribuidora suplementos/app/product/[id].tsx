@@ -20,7 +20,12 @@ export default function Screen() {
     const number = parseFloat(inputValue);
 
     const comprar = ()=>{
-        alert("você comprou o item: " + product.title + " por: R$ " + (number * product.price))
+        if (number <= 0 || isNaN(number) || number == null) {
+            alert("quantidade inválida")        
+        } else {
+            alert("você comprou o item: " + product.title + " por: R$ " + (number * product.price))
+        }
+        
     }
 
     return(
@@ -70,10 +75,11 @@ const style = StyleSheet.create({
     area: {
         flex: 1,
         padding: 10,
+        backgroundColor: 'lightblue',
     },
 
     buttonArea: {
-        padding: 10,
+        padding: 5,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -102,7 +108,7 @@ const style = StyleSheet.create({
     priceArea: {
         padding: 10,
         borderRadius: 10,
-        backgroundColor: "#cccccc"
+        backgroundColor: "#dcdcdc"
     },
 
     price: {
@@ -115,6 +121,9 @@ const style = StyleSheet.create({
         width: 120,
         alignItems: "center",
         justifyContent: "center",
+        borderColor: 'gray',
+        borderWidth: 3,
+        borderRadius: 20
     },
 
     txt:{
