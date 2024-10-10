@@ -14,7 +14,7 @@ export default function Screen (){
 
     const products = getAllProducts();
 
-    const [Text, onChangeText] = useState('procure produto');
+    const [Text, onChangeText] = useState('procurar produto');
 
     return(
         <View style={styles.container}>

@@ -48,10 +48,10 @@ export default function Screen() {
 
             <View style={style.buttonArea}>
                 <View style={style.inputArea}>
-                    <Text style={style.txt}>quantidade de produtos</Text>
+                    <Text style={style.txt}>Quantidade de produtos</Text>
                     <TextInput
                         style={style.input}
-                        placeholder="quantidade"
+                        placeholder="Quantidade"
                         keyboardType="numeric"
                         value={inputValue}
                         onChangeText={setInputValue}
@@ -59,7 +59,7 @@ export default function Screen() {
                 </View>
                 
                 <Button
-                    title="comprar agora"
+                    title="Comprar"
                     onPress={comprar}
                 />
             </View>
