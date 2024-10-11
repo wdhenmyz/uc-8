@@ -38,4 +38,4 @@ const createTables = () => {
     });
   };
   
-  export default createTables;
+  export default {createTables};
