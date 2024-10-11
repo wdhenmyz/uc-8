@@ -1,11 +1,11 @@
 import * as SQLite from 'expo-sqlite';
 
-const db = await SQLite.openDatabase('loja'); 
+const db = SQLite.openDatabase('loja'); 
 // abri ou cria o banco de dados
 
 // criando as tabelas se elas não exitirem
 const createTables = () => {
-    db.transaction((tx: any) => {
+    db.transaction(tx => {
 
       // criando a primeira tabela 'products'
       tx.executeSql(
@@ -19,7 +19,7 @@ const createTables = () => {
         );`,
         [],
         () => console.log('Products criada com sucesso ou já existe'),
-        (_: any, error: any) => console.log('Erro ao criar tabela: ', error)
+        (_, error) => console.log('Erro ao criar tabela: ', error)
       );
   
 
@@ -32,7 +32,7 @@ const createTables = () => {
         );`,
         [],
         () => console.log('categories criada com sucesso ou já existe'),
-        (_: any, error: any) => console.log('Erro ao criar tabela: ', error)
+        (_, error) => console.log('Erro ao criar tabela: ', error)
       );
   
     });
