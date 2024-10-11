@@ -5,7 +5,7 @@ import { router } from "expo-router";
 import React from "react";
 
 import { useEffect } from "react";
-import {createTables} from "../services/server";
+import createTables from "../services/server";
 
 export default function Screen (){
     useEffect(() => {
