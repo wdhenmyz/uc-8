@@ -4,11 +4,8 @@ import { Button } from "../components/button";
 import { router } from "expo-router";
 import React from "react";
 
-import { useEffect } from "react";
-import createTables from "../services/server";
-
 export default function Screen (){
-    
+
     
     const Start = () => {
         router.replace('/home')
