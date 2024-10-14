@@ -8,9 +8,7 @@ import { useEffect } from "react";
 import createTables from "../services/server";
 
 export default function Screen (){
-    useEffect(() => {
-        createTables()
-    })
+    
     
     const Start = () => {
         router.replace('/home')

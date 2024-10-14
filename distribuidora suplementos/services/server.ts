@@ -1,7 +1,7 @@
 import * as SQLite from 'expo-sqlite';
 
 // abri ou cria o banco de dados
-const db = SQLite.openDatabaseSync('loja'); 
+const db = await SQLite.openDatabaseAsync('loja'); 
 
 // criando as tabelas se elas não exitirem
 const createTables = async () => {
@@ -26,11 +26,11 @@ const createTables = async () => {
           title TEXT,
           cover TEXT
       );
-    `);    // 
+    `);  
 
-    console.log('Tables created successfully');
+    console.log('tabelas ciadas com sucesso!');
   } catch (error) {
-    console.error('Error creating tables:', error);
+    console.error('erro ao criar tabelas:', error);
   }
 };
 
