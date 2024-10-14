@@ -963,3 +963,5 @@ export const data: Data = {
         
     ],
 }
+
+module.exports = data

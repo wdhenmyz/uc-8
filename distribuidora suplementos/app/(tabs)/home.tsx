@@ -1,10 +1,11 @@
 import { View, StyleSheet, ScrollView, ImageBackground, Image, TextInput, FlatList } from "react-native";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 
 // puxando todos os produtos
 import { getAllProducts } from "../../services/product";
+import { fetchItems } from "../../server(2)";
 import { ProductItem } from "../../components/product-item";
 
 export default function Screen (){
@@ -12,7 +13,17 @@ export default function Screen (){
     const puravida = {uri: 'https://files.cached.puravida.com.br/api/files/static/4ea73f5b-3588-4a18-9e90-5ccc9e71c77e'}
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
-    const products = getAllProducts();
+
+    const [products, setproduct] = useState([]);
+    
+    useEffect(() => {
+      const loadItems = async () => {
+        const fetchedproducts = await fetchItems();
+        setproduct(fetchedproducts);
+      };
+      loadItems();
+    }, []);
+    
 
     const [Text, onChangeText] = useState('procurar produto');
 
