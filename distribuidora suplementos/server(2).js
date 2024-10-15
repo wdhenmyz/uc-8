@@ -7,7 +7,7 @@ export const fetchItems = async () => {
       const response = await axios.get(API_URL);
       return response.data; // Returns the array of items
     } catch (error) {
-      console.error('Error fetching items:', error);
+      console.error('erro ao carregar itens:', error);
       throw error;
     }
   };
