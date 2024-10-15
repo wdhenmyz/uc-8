@@ -1,13 +1,13 @@
 import * as SQLite from 'expo-sqlite';
 
 // abri ou cria o banco de dados
-const db = await SQLite.openDatabaseAsync('loja'); 
+const db = SQLite.openDatabase('loja'); 
 
 // criando as tabelas se elas não exitirem
-const createTables = async () => {
+const createTables = () => {
   try {
     // Use execAsync to run multiple SQL commands in one go
-    await db.execAsync(`
+    db.execAsync(`
       PRAGMA journal_mode = WAL;  -- Setting the journal mode for better performance
 
       -- criando a primeira tabela 'products'
