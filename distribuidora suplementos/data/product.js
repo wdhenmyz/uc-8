@@ -1,13 +1,4 @@
-type Product = {
-    id: number;
-    idCategory: number;
-    image: string;
-    title: string;
-    description: string;
-    price: number;
-}
-
-const product : Product[] = [
+const product = [
     {   
         idCategory: 1, 
         id: 1,            
