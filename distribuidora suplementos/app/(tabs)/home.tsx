@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 // puxando todos os produtos
 import { getAllProducts } from "../../services/product";
-import { fetchItems } from "../../server(2)";
+import { fetchItems } from "../../services/fetchAll-items";
 import { ProductItem } from "../../components/product-item";
 
 export default function Screen (){
