@@ -20,7 +20,7 @@ export default function Screen (){
     const products2 = getAllProducts();
 
 
-    const [products, setproduct] = useState<Product[]>([]);
+    /*const [products, setproduct] = useState<Product[]>([]);
     
     useEffect(() => {
       const loadItems = async () => {
@@ -28,7 +28,7 @@ export default function Screen (){
         setproduct(fetchedproducts);
       };
       loadItems();
-    }, []);
+    }, []);*/
     
     
 
@@ -68,7 +68,7 @@ export default function Screen (){
                 />
 
                 <FlatList
-                  data={products}
+                  data={products2}
                   renderItem={({item}) => <ProductItem data={item}/>}
                   keyExtractor={item => item.id.toString()}
                   style={styles.list4}

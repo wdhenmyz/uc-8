@@ -1,5 +1,5 @@
 import axios from 'axios';
-const PORT = require('./server(PORT)');
+const PORT = require('../server(PORT)');
 
 const API_URL = `http://localhost:${PORT}/api/product`; 
 
