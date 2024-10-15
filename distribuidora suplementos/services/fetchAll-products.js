@@ -1,6 +1,7 @@
 import axios from 'axios';
+const PORT = require('./server(PORT)');
 
-const API_URL = 'http://localhost:3000/api/product'; 
+const API_URL = `http://localhost:${PORT}/api/product`; 
 
 export const fetchItems = async () => {
     try {
