@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
-    "start": "expo start",
+    "start:expo": "expo start",
+    "start:node": "node server.js",
+    "start": " concurrently \"npm run start:expo\" \"npm run start:node\"",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.45",
+    "concurrently": "^9.0.1",
     "typescript": "^5.3.3"
   },
   "private": true,
