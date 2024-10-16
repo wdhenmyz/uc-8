@@ -5,7 +5,12 @@ import React from "react";
 export default function CategoryLayout(){
     return (
         <Stack>
-            <Stack.Screen name="list" options={{title:"Categorias"}}/>
+            <Stack.Screen 
+                name="list" 
+                options={{
+                    title:"Categorias",
+                    headerShown:false
+                }}/>
 
             <Stack.Screen name="[id]"/>
         </Stack>
