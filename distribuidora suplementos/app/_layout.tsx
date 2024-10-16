@@ -10,7 +10,10 @@ export default function RootLayout(){
 
             <Stack.Screen name="(tabs)"/>
 
-            <Stack.Screen name="product/[id]" options={{headerShown: true}}/>
+            <Stack.Screen 
+                name="product/[id]" 
+                options={{
+                }}/>
 
         </Stack>
     );
