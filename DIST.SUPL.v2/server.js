@@ -6,7 +6,7 @@ const product = require('./data/product')
 const port = require('./server(PORT)')
 
 const app = express();
-const PORT = port.port;
+const PORT = port.port || 3000;
 
 // Cria ou abre um banco de dados SQLite
 //const db = new sqlite3.Database('loja');
