@@ -1,12 +1,12 @@
 import { View, StyleSheet, FlatList, ImageBackground } from "react-native";
 
 // puxando todos as categorias
-import { getAllCategories } from "../../../services/category";
+
 import { CategoryItem } from "../../../components/category-item";
 import React from "react";
 
 export default function Screen (){
-    const categories = getAllCategories();
+    //const categories = ();
 
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
@@ -17,13 +17,13 @@ export default function Screen (){
                 resizeMode="cover"
                 style={styles.container}
             >
-                <FlatList
+                {/* <FlatList
                     data={categories}
                     renderItem={({item}) => <CategoryItem data={item}/>}
                     keyExtractor={item => item.id.toString()}
                     style={styles.list}
                     contentContainerStyle={styles.listContent}
-                />
+                /> */}
             </ImageBackground>
         </View>
     );
