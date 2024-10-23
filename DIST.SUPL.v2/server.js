@@ -15,7 +15,7 @@ app.use(cors({
 }));
 
 
-const loja = require('./services/server')
+const loja = require('./services/tabelas')
 
 app.use('/loja', loja)
 
