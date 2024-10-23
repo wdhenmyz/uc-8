@@ -18,15 +18,6 @@ app.use(cors({
 }));
 
 
-// Route to get all items
-app.get('/api/product', (req, res) => {
-  res.json(product); // Return the items array as JSON
-});
-
-// Rota para um status simples de "alive"
-app.get('/', (req, res) => {
-  res.send('API está funcionando!');
-});
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
