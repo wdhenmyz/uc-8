@@ -4,13 +4,9 @@ import { useState } from 'react';
 
 // puxando todos os produtos
 import { getAllProducts } from "../../services/product";
-import { fetchItems } from "../../services/fetchAll-products";
 
 // componente
 import { ProductItem } from "../../components/product-item";
-
-// tipando
-import { Product } from "../../types/product";
 
 export default function Screen (){
     const puravida2 = {uri: 'https://puravida.fbitsstatic.net/img/b/8d53d2f6-471b-46dc-8fe4-389bfe885646.jpg'}
@@ -18,19 +14,6 @@ export default function Screen (){
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
     const products2 = getAllProducts();
-
-
-    /*const [products, setproduct] = useState<Product[]>([]);
-    
-    useEffect(() => {
-      const loadItems = async () => {
-        const fetchedproducts = await fetchItems();
-        setproduct(fetchedproducts);
-      };
-      loadItems();
-    }, []);*/
-    
-    
 
     const [Text, onChangeText] = useState('procurar produto');
 
