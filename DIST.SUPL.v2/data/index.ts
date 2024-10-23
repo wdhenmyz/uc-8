@@ -1,7 +1,6 @@
 import { Category } from "../types/category";
 import { Product } from "../types/product";
 
-
 type Data = {
     categories: Category[],
     products1: Product[],

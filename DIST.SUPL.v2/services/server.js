@@ -1,37 +1,43 @@
 import * as SQLite from 'expo-sqlite';
 
-// abri ou cria o banco de dados
-const db = SQLite.openDatabase('loja'); 
+// Open or create the database
+const db = SQLite.openDatabase('loja');
 
-// criando as tabelas se elas não exitirem
+// Create tables if they do not exist
 const createTables = () => {
-  try {
-    // Use execAsync to run multiple SQL commands in one go
-    db.execAsync(`
-      PRAGMA journal_mode = WAL;  -- Setting the journal mode for better performance
+  db.transaction(tx => {
+    // Setting the journal mode for better performance
+    tx.executeSql(
+      `PRAGMA journal_mode = WAL;`
+    );
 
-      -- criando a primeira tabela 'products'
-      CREATE TABLE IF NOT EXISTS products (
+    // Creating the 'products' table
+    tx.executeSql(
+      `CREATE TABLE IF NOT EXISTS products (
         idCategory INTEGER,
         id INTEGER PRIMARY KEY,
         image TEXT,
         title TEXT,
         description TEXT,
-        price TEXT
-      );
+        price REAL
+      );`,
+      [],
+      () => console.log('Tabela "products" criada com sucesso!'),
+      (txObj, error) => console.error('Erro ao criar tabela "products":', error)
+    );
 
-      -- criando a segunda tabela 'categories'
-      CREATE TABLE IF NOT EXISTS categories (
-          id INTEGER PRIMARY KEY,
-          title TEXT,
-          cover TEXT
-      );
-    `);  
-
-    console.log('tabelas ciadas com sucesso!');
-  } catch (error) {
-    console.error('erro ao criar tabelas:', error);
-  }
+    // Creating the 'categories' table
+    tx.executeSql(
+      `CREATE TABLE IF NOT EXISTS categories (
+        id INTEGER PRIMARY KEY,
+        title TEXT,
+        cover TEXT
+      );`,
+      [],
+      () => console.log('Tabela "categories" criada com sucesso!'),
+      (txObj, error) => console.error('Erro ao criar tabela "categories":', error)
+    );
+  });
 };
 
-  export default createTables;
+module.exports = {createTables}
