@@ -8,13 +8,14 @@ const port = require('./server(PORT)')
 const app = express();
 const PORT = port.port || 3000;
 
-const loja = require('./services/server')
-
 app.use(express.json());
 // Configuração do CORS
 app.use(cors({
   origin: '*', // Ajuste conforme necessário
 }));
+
+
+const loja = require('./services/server')
 
 app.use('/loja', loja)
 
