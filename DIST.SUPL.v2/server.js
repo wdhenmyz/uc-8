@@ -3,10 +3,12 @@ const express = require('express');
 const cors = require('cors');
 
 // importando configurações
+const pool = require('./config/db')
 const port = require('./config/server(PORT)')
-const PORT = port.port || 3000;
 
+const PORT = port.port || 3000;
 const app = express();
+
 app.use(express.json());
 
 // Configuração do CORS
