@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const conect = require('./connectionString')
+const conect = require('../conection/connectionString')
 
 const pool = new Pool ({
     connectionString: conect,

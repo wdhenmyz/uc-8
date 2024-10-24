@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // importando configurações
 const pool = require('./config/db')
-const port = require('./config/server(PORT)')
+const port = require('./conection/server(PORT)')
 
 const PORT = port.port || 3000;
 const app = express();
@@ -15,6 +15,17 @@ app.use(express.json());
 app.use(cors({
   origin: '*', // Ajuste conforme necessário
 }));
+
+
+app.get('/categories', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM categories');
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+});
 
 
 
