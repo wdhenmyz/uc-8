@@ -1,7 +1,9 @@
 import { Pressable, Text, StyleSheet, Image, View } from "react-native";
-import { Category } from "../types/category"
+//import { Category } from "../types/category"
 import { router } from "expo-router";
 import React from "react";
+
+import { Category } from "../services/categorias";
 
 type Props = {
     data: Category;

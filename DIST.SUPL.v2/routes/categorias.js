@@ -25,6 +25,31 @@ const categorias = async (req, res) => {
   }
 };
 
+const categoriasID = async (req, res) => {
+  try {
+    // Captura o ID da URL
+    const id = req.url.split("/")[2]; // Supondo que a URL seja "/categories/id"
+    
+    // Consulta para obter a categoria pelo ID
+    const result = await sql`SELECT * FROM categories WHERE id = ${id}`;
+
+    // Verifica se a categoria existe
+    if (result.length === 0) {
+      res.writeHead(404, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ message: "Category not found." }));
+      return;
+    }
+
+    // Responde com os dados da categoria
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(result[0])); // Retorna apenas a categoria encontrada
+  } catch (error) {
+    console.error("Erro ao executar a consulta:", error);
+    res.writeHead(500, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ message: "Internal server error." }));
+  }
+};
+
 // Função para criar uma nova categoria (POST)
 const createCategory = async (req, res) => {
   let body = '';
@@ -67,4 +92,4 @@ const createCategory = async (req, res) => {
 };
 
 
-module.exports = {categorias, createCategory};
+module.exports = {categorias, createCategory, categoriasID};
