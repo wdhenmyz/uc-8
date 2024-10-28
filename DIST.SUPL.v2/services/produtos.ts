@@ -32,7 +32,7 @@ export const getProductById = async (id: number) => {
       throw new Error('Erro ao buscar produtos');
     }
     const data: Products[] = await response.json();
-    return data.find(item => item.id === id)
+    return data
   } catch (error) {
     console.error(error);
     return []; // Retornar um array vazio em caso de erro
