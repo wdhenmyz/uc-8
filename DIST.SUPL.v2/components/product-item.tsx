@@ -1,15 +1,16 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native"
-import { Product } from "../types/product"
 
 // rota dinâmica
 import { Link } from "expo-router"
 import React from "react"
 
+import { Products } from "../services/produtos"
+
 type Props = {
-    data: Product
+    data: Products
 }
 
-export const ProductItem = ({ data }: { data: Product }) => {
+export const ProductItem = ({ data }: Props) => {
     return (
         <Link href={`/product/${data.id}`} asChild>
             <Pressable style={styles.container}>

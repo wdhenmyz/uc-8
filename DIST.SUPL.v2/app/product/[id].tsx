@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
-import { getProductById } from "../../services/product";
+import { getProductById } from "../../services/produtosID";
 import React, { useState } from "react";
 
 export default function Screen() {

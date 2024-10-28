@@ -6,7 +6,7 @@ export interface Category {
 
 export const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:3000/categories'); // URL do seu servidor
+      const response = await fetch('http://10.0.2.2:3000/categories'); // URL do seu servidor
       console.log('Response status:', response.status); // Log do status da resposta
       if (!response.ok) {
         throw new Error('Erro ao buscar categorias');

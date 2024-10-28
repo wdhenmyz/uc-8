@@ -2,10 +2,9 @@ import { View, StyleSheet, ScrollView, ImageBackground, Image, TextInput, FlatLi
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 
-// puxando todos os produtos
-
-
 // componente
+import { fetchProducts } from "../../services/produtos";
+import { Products } from "../../services/produtos";
 import { ProductItem } from "../../components/product-item";
 
 export default function Screen (){
@@ -13,7 +12,18 @@ export default function Screen (){
     const puravida = {uri: 'https://files.cached.puravida.com.br/api/files/static/4ea73f5b-3588-4a18-9e90-5ccc9e71c77e'}
     const image = {uri: 'https://th.bing.com/th/id/OIP.7OiScC5GX8kPH0Sw_wwhsQHaKn?rs=1&pid=ImgDetMain'}
 
-    //const products = ();
+    const [Products, setProducts] = useState<Products[]>([]);
+
+    // Função para buscar categorias e definir o estado
+    const getProducts = async () => {
+        const data = await fetchProducts();
+        setProducts(data);
+    };
+
+    // useEffect para chamar a função quando o componente for montado
+    useEffect(() => {
+      getProducts();
+    }, []);
 
     const [Text, onChangeText] = useState('procurar produto');
 
@@ -50,12 +60,12 @@ export default function Screen (){
                   value={Text}
                 />
 
-                {/* <FlatList
-                  data={products2}
+                <FlatList
+                  data={Products}
                   renderItem={({item}) => <ProductItem data={item}/>}
                   keyExtractor={item => item.id.toString()}
                   style={styles.list4}
-                /> */}
+                /> 
                 
               </View>
 

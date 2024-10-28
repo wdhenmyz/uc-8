@@ -4,7 +4,7 @@ import { View, StyleSheet, FlatList } from "react-native";
 import { ProductItem } from "../../../components/product-item";
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { getCategoryById } from "../../../services/category";
-import { getProductsByCategory } from "../../../services/product";
+import { getProductsByCategory } from "../../../services/produtosID";
 import React from "react";
 
 export default function Screen (){
