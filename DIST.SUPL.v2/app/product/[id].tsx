@@ -9,12 +9,11 @@ import { Products } from "../../services/produtos";
 
 import React, { useState } from "react";
 
-export default function Screen() {
+export default async function Screen() {
     // receber o id
     const {id} = useLocalSearchParams();
     const idProduct = parseInt(id as string);
-    const product = getProductById(idProduct);
-
+    const product = await getProductById(idProduct);
 
     if (!product) {
         return router.back;
