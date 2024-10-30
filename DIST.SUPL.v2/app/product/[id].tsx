@@ -5,16 +5,14 @@ import { router, Stack, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
 
 import { getProductById } from "../../services/produtos";
-import { Products } from "../../services/produtos";
 
 import React, { useState } from "react";
 
 export default async function Screen() {
     // receber o id
     const {id} = useLocalSearchParams();
-    const idProduct = parseInt(id as string);
-    const product = await getProductById(idProduct);
-
+    const product = await getProductById(id as string);
+    
     if (!product) {
         return router.back;
     }
