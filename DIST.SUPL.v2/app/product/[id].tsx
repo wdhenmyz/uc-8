@@ -12,70 +12,91 @@ export default async function Screen() {
     // receber o id
     const { id } = useLocalSearchParams();
     const idProduct = parseInt(id as string);
+
+    // Log para verificar o idProduct
+    console.log("ID do Produto:", idProduct);
+  
     const [product, setProduct] = useState<Products | null>(null);
+    const [isLoading, setIsLoading] = useState(true); // Adicionando estado de carregamento
+    const [hasFetched, setHasFetched] = useState(false); // Estado para controle de fetch
 
+    // Função para buscar o produto pelo ID
     useEffect(() => {
-        const fetchProduct = async () => {
+        // Apenas chame a função se o ID for válido e se ainda não tiver buscado o produto
+    if (!isNaN(idProduct) && !hasFetched)  {
+          const fetchProduct = async () => {
+            setIsLoading(true); // Começa o carregamento
             const result = await getProductById(idProduct);
-                setProduct(result);
-            };
-        fetchProduct();
-    }, [idProduct]);
+            setProduct(result);
+            setIsLoading(false); // Finaliza o carregamento
+            setHasFetched(true); // Marcar como buscado
+          };
+          fetchProduct();
+        } else if (isNaN(idProduct)) {
+            console.error("ID do produto inválido");
+            }      
+      }, [idProduct, hasFetched]); // Certifique-se de que idProduct é a única dependência aqui
 
-    
+
+    // Renderizando o estado de carregamento
+    if (isLoading) {
+        return <Text style={style.title}>carregando...</Text>;
+    }
+
     if (!product) {
-        return router.back;
-    }
+        return <Text style={style.title}>Produto não encontrado</Text>;
+    } else {
 
-    const [inputValue, setInputValue] = useState('');
-    const number = parseFloat(inputValue);
+        const [inputValue, setInputValue] = useState('');
+        const number = parseFloat(inputValue);
 
-    const comprar = ()=>{
-        if (number <= 0 || isNaN(number) || number == null) {
-            alert("quantidade inválida")        
-        } else {
-            alert("você comprou o item: " + product.title + " por: R$ " + (number * product.price))
+        const comprar = ()=>{
+            if (number <= 0 || isNaN(number) || number == null) {
+                alert("quantidade inválida")        
+            } else {
+                alert("você comprou o item: " + product.title + " por: R$ " + (number * product.price))
+            }
+            
         }
-        
-    }
 
-    return(
-        <SafeAreaView style={style.container }>
-            <Stack.Screen options={{title:''}}/>
-                
-            <ScrollView style={style.area}>
-                <Image
-                    style={style.img}
-                    source={{uri: product.image}}
-                    resizeMode="cover"
-                />
-                <Text style={style.title}>{product.title}</Text>
-                <Text style={style.description}>{product.description}</Text>
-                <View style={style.priceArea}>
-                    <Text style={style.price}>R$ {product.price}</Text>
-                </View>
-                
-            </ScrollView>
+        return(
+            <SafeAreaView style={style.container }>
+                <Stack.Screen options={{title:''}}/>
+                    
+                <ScrollView style={style.area}>
+                    <Image
+                        style={style.img}
+                        source={{uri: product.image}}
+                        resizeMode="cover"
+                    />
+                    <Text style={style.title}>{product.title}</Text>
+                    <Text style={style.description}>{product.description}</Text>
+                    <View style={style.priceArea}>
+                        <Text style={style.price}>R$ {product.price}</Text>
+                    </View>
+                    
+                </ScrollView>
 
-            <View style={style.buttonArea}>
-                <View style={style.inputArea}>
-                    <Text style={style.txt}>Quantidade de produtos</Text>
-                    <TextInput
-                        style={style.input}
-                        placeholder="Quantidade"
-                        keyboardType="numeric"
-                        value={inputValue}
-                        onChangeText={setInputValue}
+                <View style={style.buttonArea}>
+                    <View style={style.inputArea}>
+                        <Text style={style.txt}>Quantidade de produtos</Text>
+                        <TextInput
+                            style={style.input}
+                            placeholder="Quantidade"
+                            keyboardType="numeric"
+                            value={inputValue}
+                            onChangeText={setInputValue}
+                        />
+                    </View>
+                    
+                    <Button
+                        title="Comprar"
+                        onPress={comprar}
                     />
                 </View>
-                
-                <Button
-                    title="Comprar"
-                    onPress={comprar}
-                />
-            </View>
-        </SafeAreaView>
-    );
+            </SafeAreaView>
+        );
+    }
 }
 
 const style = StyleSheet.create({
