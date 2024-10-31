@@ -4,14 +4,24 @@ import { Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
 
-import { getProductById } from "../../services/produtos";
+import { getProductById, Products } from "../../services/produtos";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default async function Screen() {
     // receber o id
-    const {id} = useLocalSearchParams();
-    const product = await getProductById(id as string);
+    const { id } = useLocalSearchParams();
+    const idProduct = parseInt(id as string);
+    const [product, setProduct] = useState<Products | null>(null);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const result = await getProductById(idProduct);
+                setProduct(result);
+            };
+        fetchProduct();
+    }, [idProduct]);
+
     
     if (!product) {
         return router.back;

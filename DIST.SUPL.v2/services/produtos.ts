@@ -24,7 +24,7 @@ export interface Products {
 
 
 // funçaõ para pegar um produto específico
-export const getProductById = async (id: string): Promise<Products | null> => {
+export const getProductById = async (id: number): Promise<Products | null> => {
 
   try {
     const response = await fetch(`http://10.0.2.2:3000/products/${id}`);
