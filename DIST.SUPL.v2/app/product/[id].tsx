@@ -1,7 +1,7 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
-import { router, Stack, useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
 
 import { getProductById, Products } from "../../services/produtos";
